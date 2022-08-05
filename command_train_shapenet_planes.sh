@@ -1,0 +1,33 @@
+#!/bin/bash
+
+python train_shapenet.py \
+    --train \
+    --lr_decay \
+    --lr_decay_rate 0.5 \
+    --lr_decay_steps 100000 \
+    --batch_check \
+    --log_dir logs/log_train_shapenet_planes \
+    --model_type pcn_parallel_main \
+    --base_lr 0.0005 \
+    --batch_size 32 \
+    --max_step 400000 \
+    --num_input_points_octants 387 \
+    --num_gt_points_octants 1024 \
+    --num_input_points_pcn 3096 \
+    --num_gt_points_pcn 8192 \
+    --num_parts 8 \
+    --steps_per_print 100 \
+    --results_dir results/results_shapenet_planes \
+    --steps_per_visu_save 25000 \
+    --steps_per_save 50000 \
+    --steps_per_eval 500000 \
+    --lmdb_train airplane/lmdb/train/shapenet_itnet_train.lmdb \
+    --lmdb_valid airplane/lmdb/train/shapenet_itnet_train.lmdb \
+    --lmdb_test airplane/lmdb/train/shapenet_itnet_test.lmdb \
+    --encoder_dropout 0.3 \
+    --prob_zero_start 2 \
+    --prob_zero_end 7 \
+    --fuzzy_boundary 0.02 \
+    --slurm_output_file output_logs/output_shapenet_planes.txt \
+    --gt_to_pred_weight 0.75 \
+    --pred_to_gt_weight 0.25
