@@ -1,6 +1,4 @@
-# Self-Supervised-Point-Cloud-Completion-via-Inpainting
-
-Code release for the paper Self-Supervised-Point-Cloud-Completion-via-Inpainting, BMVC 2021 (Oral).
+# Self-Supervised-Point-Cloud-Completion-via-Inpainting, BMVC 2021 (Oral).
 
 Authors: Himangi Mittal, Brian Okorn, Arpit Jangid, David Held
 
